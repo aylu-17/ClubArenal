@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Club Atlético Esperanza</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <img src="./public/logo.png" alt="Logo Club" class="logo">
+                    <span class="logo-text">Club de Futbol Arenal</span>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#inicio" class="nav-link">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">Nosotros<span class="arrow">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Mandar info</a></li>
+                            <li><a href="#">Historia</a></li>
+                            <li><a href="#">Cuerpo Tecnico</a></li>
+                            <li><a href="#">Lugar</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">Equipos <span class="arrow">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Mandar info</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Tienda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Contacto</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Sección Hero con Slider de Imágenes -->
+    <section id="inicio" class="hero">
+        <div class="hero-slider">
+            <div class="slide active" data-bg="/placeholder.svg?height=800&width=1400&text=Estadio+Principal">
+                <img src="./public/imagen1.webp" alt="Estadio Principal">
+            </div>
+            <div class="slide" data-bg="/placeholder.svg?height=800&width=1400&text=Celebración+Gol">
+                <img src="./public/imagen2.jpeg" alt="Celebración de Gol">
+            </div>
+            <div class="slide" data-bg="/placeholder.svg?height=800&width=1400&text=Cancha+Verde">
+                <img src="./public/imagen3.jpg" alt="Cancha de Fútbol">
+            </div>
+            <div class="slide" data-bg="/placeholder.svg?height=800&width=1400&text=Hinchada+Celebrando">
+                <img src="./public/imagen4.jpg" alt="Hinchada Celebrando">
+            </div>
+            <div class="slide" data-bg="/placeholder.svg?height=800&width=1400&text=Equipo+Campeón">
+                <img src="./public/imagen5.jpg" alt="Equipo Campeón">
+            </div>
+        </div>
+        
+        <!-- Controles del slider -->
+        <div class="slider-nav">
+            <button class="slider-btn prev-slide">‹</button>
+            <button class="slider-btn next-slide">›</button>
+        </div>
+        
+        <!-- Indicadores del slider -->
+        <div class="slider-indicators">
+            <span class="indicator active" data-slide="0"></span>
+            <span class="indicator" data-slide="1"></span>
+            <span class="indicator" data-slide="2"></span>
+            <span class="indicator" data-slide="3"></span>
+            <span class="indicator" data-slide="4"></span>
+        </div>
+
+        <!-- Contenido del Hero -->
+        <div class="hero-content">
+            <h1 class="hero-title">Club de Futbol Arenal</h1>
+            <p class="hero-subtitle">Pasión, Tradición y Gloria</p>
+            <p class="hero-description">Desde 1925 formando campeones dentro y fuera de la cancha</p>
+            <button class="hero-btn">Conoce Nuestra Historia</button>
+        </div>
+        
+        <!-- Overlay para mejorar legibilidad del texto -->
+        <div class="hero-overlay"></div>
+    </section>
+
+    <!-- Sección Historia -->
+    <section id="historia" class="historia">
+        <div class="container">
+            <div class="historia-content">
+                <div class="historia-text">
+                    <h2 class="section-title">Nuestra Historia</h2>
+                    <p class="historia-description">
+                        Fundado en 1925, el Club Atlético Esperanza nació del sueño de un grupo de jóvenes apasionados por el fútbol. 
+                        Durante casi un siglo, hemos sido protagonistas de innumerables hazañas deportivas, formando no solo grandes 
+                        futbolistas, sino también personas íntegras que llevan nuestros valores por el mundo.
+                    </p>    
+                    <div class="historia-stats">
+                        <div class="stat">
+                            <h3>99</h3>
+                            <p>Años de Historia</p>
+                        </div>
+                        <div class="stat">
+                            <h3>15</h3>
+                            <p>Títulos Ganados</p>
+                        </div>
+                        <div class="stat">
+                            <h3>200</h3>
+                            <p>Jugadores Formados</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="historia-image">
+                    <img src="./public/imagen6.webp" alt="Historia del Club">
+                    <div class="image-caption">
+                        <p>Fundación del club en 1925</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Categorías -->
+    <section id="categorias" class="categorias">
+        <div class="container">
+            <h2 class="section-title">Nuestras Categorías</h2>
+            <div class="categorias-slider">
+                <div class="categorias-track">
+                    <div class="categoria-card">
+                        <img src="./public/imagen7.jpg" alt="Primera División">
+                        <div class="categoria-info">
+                            <h3>Primera División</h3>
+                            <p>Nuestro equipo principal compite en la liga profesional con jugadores de élite.</p>
+                            <button class="categoria-btn">Ver Más</button>
+                        </div>
+                    </div>
+                    <div class="categoria-card">
+                        <img src="./public/imagen8.jpeg" alt="Reserva">
+                        <div class="categoria-info">
+                            <h3>Club Femenino</h3>
+                            <p>Cantera de futuros talentos que buscan su oportunidad en el fútbol profesional.</p>
+                            <button class="categoria-btn">Ver Más</button>
+                        </div>
+                    </div>
+                    <div class="categoria-card">
+                        <img src="./public/imagen9.jpeg " alt="Juveniles">
+                        <div class="categoria-info">
+                            <h3>Juveniles</h3>
+                            <p>Formación integral de jóvenes promesas del fútbol nacional.</p>
+                            <button class="categoria-btn">Ver Más</button>
+                        </div>
+                    </div>
+                    <div class="categoria-card">
+                        <img src="/placeholder.svg?height=250&width=350&text=Infantiles" alt="Infantiles">
+                        <div class="categoria-info">
+                            <h3>Infantiles</h3>
+                            <p>Iniciación deportiva para los más pequeños con metodología especializada.</p>
+                            <button class="categoria-btn">Ver Más</button>
+                        </div>
+                    </div>
+                    <div class="categoria-card">
+                        <img src="/placeholder.svg?height=250&width=350&text=Fútbol+Femenino" alt="Fútbol Femenino">
+                        <div class="categoria-info">
+                            <h3>Fútbol Femenino</h3>
+                            <p>Nuestro equipo femenino compite con orgullo en la liga nacional.</p>
+                            <button class="categoria-btn">Ver Más</button>
+                        </div>
+                    </div>
+                    <div class="categoria-card">
+                        <img src="/placeholder.svg?height=250&width=350&text=Escuela+de+Fútbol" alt="Escuela de Fútbol">
+                        <div class="categoria-info">
+                            <h3>Escuela de Fútbol</h3>
+                            <p>Formación desde temprana edad con valores deportivos y humanos.</p>
+                            <button class="categoria-btn">Ver Más</button>
+                        </div>
+                    </div>
+                    <div class="categoria-card">
+                        <img src="/placeholder.svg?height=250&width=350&text=Veteranos" alt="Veteranos">
+                        <div class="categoria-info">
+                            <h3>Veteranos</h3>
+                            <p>Fútbol recreativo para quienes siguen amando el deporte.</p>
+                            <button class="categoria-btn">Ver Más</button>
+                        </div>
+                </div>
+            </div>
+            <div class="slider-controls">
+                <button class="prev-btn">‹</button>
+                <button class="next-btn">›</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería -->
+    <section id="galeria" class="galeria">
+        <div class="container">
+            <h2 class="section-title">Galería</h2>
+            <div class="galeria-slider">
+                <div class="galeria-track">
+                    <img src="/placeholder.svg?height=300&width=400&text=Partido+Emocionante" alt="Partido Emocionante">
+                    <img src="/placeholder.svg?height=300&width=400&text=Gol+Histórico" alt="Gol Histórico">
+                    <img src="/placeholder.svg?height=300&width=400&text=Entrenamiento+Intenso" alt="Entrenamiento Intenso">
+                    <img src="/placeholder.svg?height=300&width=400&text=Hinchada+Apasionada" alt="Hinchada Apasionada">
+                    <img src="/placeholder.svg?height=300&width=400&text=Trofeo+Conquistado" alt="Trofeo Conquistado">
+                    <img src="/placeholder.svg?height=300&width=400&text=Vestuario+Motivado" alt="Vestuario Motivado">
+                    <img src="/placeholder.svg?height=300&width=400&text=Estadio+Nocturno" alt="Estadio Nocturno">
+                    <img src="/placeholder.svg?height=300&width=400&text=Juveniles+Promesa" alt="Juveniles Promesa">
+                    <img src="/placeholder.svg?height=300&width=400&text=Celebración+Título" alt="Celebración Título">
+                    <img src="/placeholder.svg?height=300&width=400&text=Cancha+Perfecta" alt="Cancha Perfecta">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulario de Contacto -->
+    <section id="contacto" class="contacto">
+        <div class="container">
+            <h2 class="section-title">Contáctanos</h2>
+            <div class="contacto-content">
+                <div class="contacto-info">
+                    <h3>Información de Contacto</h3>
+                    <div class="info-item">
+                        <strong>📍 Dirección:</strong>
+                        <p>Av. Deportes 1234, Ciudad Esperanza</p>
+                    </div>
+                    <div class="info-item">
+                        <strong>📞 Teléfono:</strong>
+                        <p>+54 11 1234-5678</p>
+                    </div>
+                    <div class="info-item">
+                        <strong>✉️ Email:</strong>
+                        <p>info@clubesperanza.com</p>
+                    </div>
+                    <div class="info-item">
+                        <strong>🕒 Horarios:</strong>
+                        <p>Lunes a Viernes: 9:00 - 18:00</p>
+                        <p>Sábados: 9:00 - 14:00</p>
+                    </div>
+                    <div class="info-item">
+                        <strong>🌐 Redes Sociales:</strong>
+                        <div class="social-preview">
+                            <a href="#" class="social-link">Facebook</a>
+                            <a href="#" class="social-link">Instagram</a>
+                            <a href="#" class="social-link">Twitter</a>
+                        </div>
+                    </div>
+                </div>
+                <form class="contacto-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="nombre">Nombre Completo *</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" id="telefono" name="telefono">
+                    </div>
+                    <div class="form-group">
+                        <label for="asunto">Asunto *</label>
+                        <select id="asunto" name="asunto" required>
+                            <option value="">Selecciona un asunto</option>
+                            <option value="inscripcion">Inscripción</option>
+                            <option value="informacion">Información General</option>
+                            <option value="sponsors">Sponsors</option>
+                            <option value="prensa">Prensa</option>
+                            <option value="otros">Otros</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje *</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Escribe tu mensaje aquí..."></textarea>
+                    </div>
+                    <button type="submit" class="form-btn">Enviar Mensaje</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="./public/logo.png" alt="Logo Club">
+                        <h3>Club de Futbol Arenal</h3>
+                    </div>
+                    <p>Formando campeones dentro y fuera de la cancha desde 1925.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#historia">Historia</a></li>
+                        <li><a href="#categorias">Categorías</a></li>
+                        <li><a href="#galeria">Galería</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Categorías</h4>
+                    <ul>
+                        <li><a href="#primera">Primera División</a></li>
+                        <li><a href="#reserva">Reserva</a></li>
+                        <li><a href="#juveniles">Juveniles</a></li>
+                        <li><a href="#femenino">Fútbol Femenino</a></li>
+                        <li><a href="#escuela">Escuela de Fútbol</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Síguenos</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link">Facebook</a>
+                        <a href="#" class="social-link">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy;2025 Club de futbol Arenal. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="./js/script.js"></script>
+</body>
+</html>
