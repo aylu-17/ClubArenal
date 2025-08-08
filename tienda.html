@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Oficial - Club de futbol Arenal</title>
+    <link rel="stylesheet" href="./styles/tienda.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <img src="./public/logo.png" alt="Logo Club" class="logo">
+                    <span class="logo-text">Tienda Oficial</span>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#productos" class="nav-link">Productos</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a href="#contacto" class="nav-link">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#terminos" class="nav-link">Términos y Condiciones</a> 
+                    </li>
+                </ul>
+                <div class="nav-actions">
+                    <button class="search-btn">🔍</button>
+                    <div class="search-box" id="searchBox" style="display:none;">
+                        <input type="text" id="searchInput" placeholder="¿Qué producto buscas?">
+                        <button id="searchSubmit">Buscar</button>
+                    </div>
+                    <button class="cart-btn" onclick="toggleCart()">
+                        🛒 <span class="cart-count">0</span>
+                    </button>
+                </div>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Categorías Destacadas -->
+    <section class="categorias-destacadas">
+        <div class="container">
+            <h2 class="section-title">Categorías</h2>
+            <div class="categorias-grid">
+                <div class="categoria-item" onclick="filterProducts('camisetas')">
+                    <img src="./images/remera.jpeg" alt="Camisetas">
+                    <h3>Camisetas</h3>
+                    <p>Oficiales y Retro</p>
+                </div>
+                <div class="categoria-item" onclick="filterProducts('accesorios')">
+                    <img src="./images/gorra.jpeg" alt="Accesorios">
+                    <h3>Accesorios</h3>
+                    <p>Gorras, Bufandas y más</p>
+                </div>
+                <div class="categoria-item" onclick="filterProducts('deportivo')">
+                    <img src="./images/remera casual.jpeg" alt="Ropa Deportiva">
+                    <h3>Ropa Deportiva</h3>
+                    <p>Entrenamiento y Casual</p>
+                </div>
+                <div class="categoria-item" onclick="filterProducts('souvenirs')">
+                    <img src="./images/taza.jpeg" alt="Souvenirs">
+                    <h3>Souvenirs</h3>
+                    <p>Recuerdos y Coleccionables</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filtros y Búsqueda -->
+    <section class="filtros-section">
+        <div class="container">
+            <div class="filtros-container">
+                <div class="filtros-left">
+                    <button class="filter-btn active" onclick="filterProducts('todos')">Todos</button>
+                    <button class="filter-btn" onclick="filterProducts('camisetas')">Camisetas</button>
+                    <button class="filter-btn" onclick="filterProducts('accesorios')">Accesorios</button>
+                    <button class="filter-btn" onclick="filterProducts('deportivo')">Deportivo</button>
+                    <button class="filter-btn" onclick="filterProducts('souvenirs')">Souvenirs</button>
+                </div>
+                <div class="filtros-right">
+                    <select class="sort-select" onchange="sortProducts(this.value)">
+                        <option value="default">Ordenar por</option>
+                        <option value="price-low">Precio: Menor a Mayor</option>
+                        <option value="price-high">Precio: Mayor a Menor</option>
+                        <option value="name">Nombre A-Z</option>
+                        <option value="popular">Más Popular</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Productos -->
+    <section id="productos" class="productos-section">
+        <div class="container">
+            <h2 class="section-title">Nuestros Productos</h2>
+            <div class="productos-grid" id="productosGrid">
+                <!-- Los productos se cargan dinámicamente desde JavaScript -->
+            </div>
+            <div class="load-more-container">
+                <button class="load-more-btn" onclick="loadMoreProducts()">Cargar Más Productos</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Debug info (remover en producción) -->
+    <div id="debug-info" style="position: fixed; top: 10px; left: 10px; background: rgba(0,0,0,0.8); color: white; padding: 10px; border-radius: 5px; font-size: 12px; z-index: 9999;">
+        <div>Productos cargados: <span id="debug-products">0</span></div>
+        <div>Carrito: <span id="debug-cart">0</span></div>
+        <div>Estado: <span id="debug-status">Cargando...</span></div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="./public/logo.png" alt="Logo Club">
+                        <h3>Tienda Oficial</h3>
+                    </div>
+                    <p>Productos oficiales del Club Atlético Esperanza. Calidad garantizada</p>
+                    <div class="payment-methods">
+                        <span>💳 Visa</span>
+                        <span>💳 Mastercard</span>
+                        <span>💰 Mercado Pago</span>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <div class="contact-info">
+                        <p>📞 +54 11 1234-5678</p>
+                        <p>✉️ tienda@clubesperanza.com</p>
+                        <p>📍 Av. Deportes 1234, Ciudad</p>
+                        <p>🕒 Lun-Vie: 9:00-18:00</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link">Facebook</a>
+                        <a href="#" class="social-link">Instagram</a>
+                        <a href="#" class="social-link">Twitter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Club Atlético Esperanza - Tienda Oficial. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+      <!-- Carrito Lateral  -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Carrito de Compras</h3>
+            <button class="close-cart" onclick="toggleCart()">✕</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+             Los items del carrito se cargan dinámicamente 
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <strong>Total: $<span id="cartTotal">0</span></strong>
+            </div>
+            
+             Campos para WhatsApp 
+            <div class="whatsapp-form">
+                <div class="form-group">
+                    <label for="customerName">Tu nombre:</label>
+                    <input type="text" id="customerName" placeholder="Ingresa tu nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="orderComments">Comentarios adicionales:</label>
+                    <textarea id="orderComments" placeholder="Talles, colores, etc." rows="2"></textarea>
+                </div>
+            </div>
+            
+            <button class="whatsapp-btn" onclick="sendWhatsAppOrder()">
+                📱 Enviar Pedido por WhatsApp
+            </button>
+            <button class="clear-cart-btn" onclick="clearCart()">Vaciar Carrito</button>
+        </div>
+    </div>
+
+     <!-- Overlay del carrito  -->
+    <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+
+     <!-- Modal de producto  -->
+    <div class="product-modal" id="productModal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeProductModal()">&times;</span>
+            <div class="modal-body" id="modalBody">
+                 Contenido del modal se carga dinámicamente 
+            </div>
+        </div>
+    </div>
+
+
+   <!-- Notificación de éxito -->
+    <div id="notification" class="notification"></div>
+
+    <script src="./js/tienda.js"></script>
+</body>
+</html>

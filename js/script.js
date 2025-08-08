@@ -166,7 +166,7 @@ function initializeNavigation() {
 
 // ===== SLIDER DE CATEGORÍAS =====
 function initializeCategorySlider() {
-    if (!categoriesTrack || categoryCards.length === 0) return;
+    if (!categoryCards.length === 0) return;
     
     const prevBtn = document.querySelector('.prev-btn');
     const nextBtn = document.querySelector('.next-btn');

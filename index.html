@@ -22,9 +22,6 @@
                         <a href="#" class="nav-link dropdown-toggle">Nosotros<span class="arrow">▼</span></a>
                         <ul class="dropdown-menu">
                             <li><a href="#">Mandar info</a></li>
-                            <li><a href="#">Historia</a></li>
-                            <li><a href="#">Cuerpo Tecnico</a></li>
-                            <li><a href="#">Lugar</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
@@ -34,10 +31,10 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Tienda</a>
+                        <a href="./tienda.html" class="nav-link">Tienda</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Contacto</a>
+                        <a href="#contacto" class="nav-link">Contacto</a>
                     </li>
                 </ul>
                 <div class="hamburger">
@@ -163,7 +160,7 @@
                         </div>
                     </div>
                     <div class="categoria-card">
-                        <img src="/placeholder.svg?height=250&width=350&text=Infantiles" alt="Infantiles">
+                        <img src="./public/imagen10.jpeg" alt="Infantiles">
                         <div class="categoria-info">
                             <h3>Infantiles</h3>
                             <p>Iniciación deportiva para los más pequeños con metodología especializada.</p>
@@ -171,29 +168,13 @@
                         </div>
                     </div>
                     <div class="categoria-card">
-                        <img src="/placeholder.svg?height=250&width=350&text=Fútbol+Femenino" alt="Fútbol Femenino">
+                        <img src="./public/imagen8.jpeg" alt="Fútbol Femenino">
                         <div class="categoria-info">
                             <h3>Fútbol Femenino</h3>
                             <p>Nuestro equipo femenino compite con orgullo en la liga nacional.</p>
                             <button class="categoria-btn">Ver Más</button>
                         </div>
                     </div>
-                    <div class="categoria-card">
-                        <img src="/placeholder.svg?height=250&width=350&text=Escuela+de+Fútbol" alt="Escuela de Fútbol">
-                        <div class="categoria-info">
-                            <h3>Escuela de Fútbol</h3>
-                            <p>Formación desde temprana edad con valores deportivos y humanos.</p>
-                            <button class="categoria-btn">Ver Más</button>
-                        </div>
-                    </div>
-                    <div class="categoria-card">
-                        <img src="/placeholder.svg?height=250&width=350&text=Veteranos" alt="Veteranos">
-                        <div class="categoria-info">
-                            <h3>Veteranos</h3>
-                            <p>Fútbol recreativo para quienes siguen amando el deporte.</p>
-                            <button class="categoria-btn">Ver Más</button>
-                        </div>
-                </div>
             </div>
             <div class="slider-controls">
                 <button class="prev-btn">‹</button>
@@ -208,16 +189,16 @@
             <h2 class="section-title">Galería</h2>
             <div class="galeria-slider">
                 <div class="galeria-track">
-                    <img src="/placeholder.svg?height=300&width=400&text=Partido+Emocionante" alt="Partido Emocionante">
-                    <img src="/placeholder.svg?height=300&width=400&text=Gol+Histórico" alt="Gol Histórico">
-                    <img src="/placeholder.svg?height=300&width=400&text=Entrenamiento+Intenso" alt="Entrenamiento Intenso">
-                    <img src="/placeholder.svg?height=300&width=400&text=Hinchada+Apasionada" alt="Hinchada Apasionada">
-                    <img src="/placeholder.svg?height=300&width=400&text=Trofeo+Conquistado" alt="Trofeo Conquistado">
-                    <img src="/placeholder.svg?height=300&width=400&text=Vestuario+Motivado" alt="Vestuario Motivado">
-                    <img src="/placeholder.svg?height=300&width=400&text=Estadio+Nocturno" alt="Estadio Nocturno">
-                    <img src="/placeholder.svg?height=300&width=400&text=Juveniles+Promesa" alt="Juveniles Promesa">
-                    <img src="/placeholder.svg?height=300&width=400&text=Celebración+Título" alt="Celebración Título">
-                    <img src="/placeholder.svg?height=300&width=400&text=Cancha+Perfecta" alt="Cancha Perfecta">
+                    <img src="./public/127_listaImagenes-0_550.jpg" alt="Partido Emocionante">
+                    <img src="./public/imagen1.webp" alt="Gol Histórico">
+                    <img src="./public/imagen4.jpg" alt="Entrenamiento Intenso">
+                    <img src="./public/imagen6.webp" alt="Hinchada Apasionada">
+                    <img src="./public/imagen7.jpg" alt="Trofeo Conquistado">
+                    <img src="./public/imagen9.jpeg" alt="Vestuario Motivado">
+                    <img src="./public/imagen5.jpg" alt="Estadio Nocturno">
+                    <img src="./public/imagen2.jpeg" alt="Juveniles Promesa">
+                    <img src="./public/imagen6.webp" alt="Celebración Título">
+                    <img src="./public/imagen2.jpeg" alt="Cancha Perfecta">
                 </div>
             </div>
         </div>
@@ -258,16 +239,12 @@
                 </div>
                 <form class="contacto-form" id="contactForm">
                     <div class="form-group">
-                        <label for="nombre">Nombre Completo *</label>
+                        <label for="nombre">Nombre Completo </label>
                         <input type="text" id="nombre" name="nombre" required>
                     </div>
                     <div class="form-group">
-                        <label for="email">Email *</label>
+                        <label for="email">Email </label>
                         <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="telefono">Teléfono</label>
-                        <input type="tel" id="telefono" name="telefono">
                     </div>
                     <div class="form-group">
                         <label for="asunto">Asunto *</label>
@@ -275,13 +252,11 @@
                             <option value="">Selecciona un asunto</option>
                             <option value="inscripcion">Inscripción</option>
                             <option value="informacion">Información General</option>
-                            <option value="sponsors">Sponsors</option>
-                            <option value="prensa">Prensa</option>
                             <option value="otros">Otros</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="mensaje">Mensaje *</label>
+                        <label for="mensaje">Mensaje </label>
                         <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Escribe tu mensaje aquí..."></textarea>
                     </div>
                     <button type="submit" class="form-btn">Enviar Mensaje</button>
