@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Club de Futbol Arenal</title>
+    <title>Club Atlético Esperanza</title>
     <link rel="stylesheet" href="./styles/styles.css">
 </head>
 <body>
@@ -15,10 +15,23 @@
                     <span class="logo-text">Club de Futbol Arenal</span>
                 </div>
                 <ul class="nav-menu">
-                    <li class="nav-item"><a href="#inicio" class="nav-link">Inicio</a></li>
-                    <li class="nav-item"><a href="./nosotros.html" class="nav-link">Nosotros</a></li>
-                    <li class="nav-item"><a href="#categorias" class="nav-link">Categorias</a></li>
-                    <li class="nav-item"><a href="#contacto" class="nav-link">Contacto</a></li>
+                    <li class="nav-item">
+                        <a href="#inicio" class="nav-link">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">Nosotros<span class="arrow">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Mandar info</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-menu">
+                       <li class="nav-item">
+                        <a href="#categorias" class="nav-link">Categorias</a>
+                        </li>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contacto" class="nav-link">Contacto</a>
+                    </li>
                 </ul>
                 <div class="hamburger">
                     <span class="bar"></span>
@@ -29,19 +42,33 @@
         </nav>
     </header>
 
-    <!-- Hero Slider -->
+    <!-- Sección Hero con Slider de Imágenes -->
     <section id="inicio" class="hero">
         <div class="hero-slider">
-            <div class="slide active"><img src="./public/imagen1.webp" alt="Estadio Principal"></div>
-            <div class="slide"><img src="./public/imagen2.jpeg" alt="Celebración de Gol"></div>
-            <div class="slide"><img src="./public/imagen3.jpg" alt="Cancha de Fútbol"></div>
-            <div class="slide"><img src="./public/imagen4.jpg" alt="Hinchada Celebrando"></div>
-            <div class="slide"><img src="./public/imagen5.jpg" alt="Equipo Campeón"></div>
+            <div class="slide active" data-bg="/placeholder.svg?height=800&width=1400&text=Estadio+Principal">
+                <img src="./public/imagen1.webp" alt="Estadio Principal">
+            </div>
+            <div class="slide" data-bg="/placeholder.svg?height=800&width=1400&text=Celebración+Gol">
+                <img src="./public/imagen2.jpeg" alt="Celebración de Gol">
+            </div>
+            <div class="slide" data-bg="/placeholder.svg?height=800&width=1400&text=Cancha+Verde">
+                <img src="./public/imagen3.jpg" alt="Cancha de Fútbol">
+            </div>
+            <div class="slide" data-bg="/placeholder.svg?height=800&width=1400&text=Hinchada+Celebrando">
+                <img src="./public/imagen4.jpg" alt="Hinchada Celebrando">
+            </div>
+            <div class="slide" data-bg="/placeholder.svg?height=800&width=1400&text=Equipo+Campeón">
+                <img src="./public/imagen5.jpg" alt="Equipo Campeón">
+            </div>
         </div>
+        
+        <!-- Controles del slider -->
         <div class="slider-nav">
             <button class="slider-btn prev-slide">‹</button>
             <button class="slider-btn next-slide">›</button>
         </div>
+        
+        <!-- Indicadores del slider -->
         <div class="slider-indicators">
             <span class="indicator active" data-slide="0"></span>
             <span class="indicator" data-slide="1"></span>
@@ -49,41 +76,56 @@
             <span class="indicator" data-slide="3"></span>
             <span class="indicator" data-slide="4"></span>
         </div>
+
+        <!-- Contenido del Hero -->
         <div class="hero-content">
             <h1 class="hero-title">Club de Futbol Arenal</h1>
             <p class="hero-subtitle">Pasión, Tradición y Gloria</p>
             <p class="hero-description">Desde 1925 formando campeones dentro y fuera de la cancha</p>
-            <button class="hero-btn" onclick="window.location.href='./nosotros.html'">Conoce Toda Nuestra Historia</button>
-
+            <button class="hero-btn">Conoce Nuestra Historia</button>
         </div>
+        
+        <!-- Overlay para mejorar legibilidad del texto -->
         <div class="hero-overlay"></div>
     </section>
 
-    <!-- Historia -->
+    <!-- Sección Historia -->
     <section id="historia" class="historia">
         <div class="container">
             <div class="historia-content">
                 <div class="historia-text">
                     <h2 class="section-title">Nuestra Historia</h2>
-                    <p>
+                    <p class="historia-description">
                         Fundado en 1925, el Club Atlético Esperanza nació del sueño de un grupo de jóvenes apasionados por el fútbol. 
-                        Durante casi un siglo, hemos sido protagonistas de innumerables hazañas deportivas.
-                    </p>
+                        Durante casi un siglo, hemos sido protagonistas de innumerables hazañas deportivas, formando no solo grandes 
+                        futbolistas, sino también personas íntegras que llevan nuestros valores por el mundo.
+                    </p>    
                     <div class="historia-stats">
-                        <div class="stat"><h3>99</h3><p>Años de Historia</p></div>
-                        <div class="stat"><h3>15</h3><p>Títulos Ganados</p></div>
-                        <div class="stat"><h3>200</h3><p>Jugadores Formados</p></div>
+                        <div class="stat">
+                            <h3>99</h3>
+                            <p>Años de Historia</p>
+                        </div>
+                        <div class="stat">
+                            <h3>15</h3>
+                            <p>Títulos Ganados</p>
+                        </div>
+                        <div class="stat">
+                            <h3>200</h3>
+                            <p>Jugadores Formados</p>
+                        </div>
                     </div>
                 </div>
                 <div class="historia-image">
                     <img src="./public/imagen6.webp" alt="Historia del Club">
-                    <div class="image-caption"><p>Fundación del club en 1925</p></div>
+                    <div class="image-caption">
+                        <p>Fundación del club en 1925</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Categorías -->
+    <!-- Sección Categorías -->
     <section id="categorias" class="categorias">
         <div class="container">
             <h2 class="section-title">Nuestras Categorías</h2>
@@ -93,39 +135,46 @@
                         <img src="./public/imagen7.jpg" alt="Primera División">
                         <div class="categoria-info">
                             <h3>Primera División</h3>
-                            <p>Equipo principal compite en la liga profesional.</p>
-                            <button class="categoria-btn" onclick="window.location.href='./cat_pri_division.html'">Ver Más</button>
+                            <p>Nuestro equipo principal compite en la liga profesional con jugadores de élite.</p>
+                            <button class="categoria-btn">Ver Más</button>
                         </div>
                     </div>
                     <div class="categoria-card">
-                        <img src="./public/imagen8.jpeg" alt="Femenino">
+                        <img src="./public/imagen8.jpeg" alt="Reserva">
                         <div class="categoria-info">
                             <h3>Club Femenino</h3>
-                            <p>Cantera de futuros talentos.</p>
-                            <button class="categoria-btn" onclick="window.location.href='./cat_femenino.html'">Ver Más</button>
+                            <p>Cantera de futuros talentos que buscan su oportunidad en el fútbol profesional.</p>
+                            <button class="categoria-btn">Ver Más</button>
                         </div>
                     </div>
                     <div class="categoria-card">
-                        <img src="./public/imagen9.jpeg" alt="Juveniles">
+                        <img src="./public/imagen9.jpeg " alt="Juveniles">
                         <div class="categoria-info">
                             <h3>Juveniles</h3>
-                            <p>Formación integral de jóvenes promesas.</p>
-                            <button class="categoria-btn" onclick="window.location.href='./cat_juvenil.html'">Ver Más</button>
+                            <p>Formación integral de jóvenes promesas del fútbol nacional.</p>
+                            <button class="categoria-btn">Ver Más</button>
                         </div>
                     </div>
                     <div class="categoria-card">
                         <img src="./public/imagen10.jpeg" alt="Infantiles">
                         <div class="categoria-info">
                             <h3>Infantiles</h3>
-                            <p>Iniciación deportiva para los más pequeños.</p>
-                            <button class="categoria-btn" onclick="window.location.href='./cat_infatil.html'">Ver Más</button>
+                            <p>Iniciación deportiva para los más pequeños con metodología especializada.</p>
+                            <button class="categoria-btn">Ver Más</button>
                         </div>
                     </div>
-                </div>
-                <div class="slider-controls">
-                    <button class="prev-btn">‹</button>
-                    <button class="next-btn">›</button>
-                </div>
+                    <div class="categoria-card">
+                        <img src="./public/imagen8.jpeg" alt="Fútbol Femenino">
+                        <div class="categoria-info">
+                            <h3>Fútbol Femenino</h3>
+                            <p>Nuestro equipo femenino compite con orgullo en la liga nacional.</p>
+                            <button class="categoria-btn">Ver Más</button>
+                        </div>
+                    </div>
+            </div>
+            <div class="slider-controls">
+                <button class="prev-btn">‹</button>
+                <button class="next-btn">›</button>
             </div>
         </div>
     </section>
@@ -142,13 +191,17 @@
                     <img src="./public/imagen6.webp" alt="Hinchada Apasionada">
                     <img src="./public/imagen7.jpg" alt="Trofeo Conquistado">
                     <img src="./public/imagen9.jpeg" alt="Vestuario Motivado">
+                    <img src="./public/imagen5.jpg" alt="Estadio Nocturno">
+                    <img src="./public/imagen2.jpeg" alt="Juveniles Promesa">
+                    <img src="./public/imagen6.webp" alt="Celebración Título">
+                    <img src="./public/imagen2.jpeg" alt="Cancha Perfecta">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contacto -->
-        <section id="contacto" class="contacto">
+    <!-- Formulario de Contacto -->
+    <section id="contacto" class="contacto">
         <div class="container">
             <h2 class="section-title">Contáctanos</h2>
             <div class="contacto-content">
@@ -166,11 +219,7 @@
                         <strong>✉️ Email:</strong>
                         <p>info@clubesperanza.com</p>
                     </div>
-                    <div class="info-item">
-                        <strong>🕒 Horarios:</strong>
-                        <p>Lunes a Viernes: 9:00 - 18:00</p>
-                        <p>Sábados: 9:00 - 14:00</p>
-                    </div>
+                    
                     <div class="info-item">
                         <strong>🌐 Redes Sociales:</strong>
                         <div class="social-preview">
@@ -180,7 +229,7 @@
                         </div>
                     </div>
                 </div>
-                <form class="contacto-form" id="contactForm">
+                <form class="contacto-form" id="contactForm" action="https://formspree.io/f/xovlnaqg">
                     <div class="form-group">
                         <label for="nombre">Nombre Completo </label>
                         <input type="text" id="nombre" name="nombre" required>
@@ -213,7 +262,10 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>Club de Futbol Arenal</h3>
+                    <div class="footer-logo">
+                        <img src="./public/logo.png" alt="Logo Club">
+                        <h3>Club de Futbol Arenal</h3>
+                    </div>
                     <p>Formando campeones dentro y fuera de la cancha desde 1925.</p>
                 </div>
                 <div class="footer-section">
@@ -229,26 +281,23 @@
                 <div class="footer-section">
                     <h4>Categorías</h4>
                     <ul>
-                        <li><a href="./cat_pri_division.html">Primera División</a></li>
-                        <li><a href="./cat_juvenil.html">Juveniles</a></li>
-                        <li><a href="./cat_femenino.html">Fútbol Femenino</a></li>
-                        <li><a href="./cat_infatil.html">Infantiles</a></li>
+                        <li><a href="#primera">Primera División</a></li>
+                        <li><a href="#reserva">Reserva</a></li>
+                        <li><a href="#juveniles">Juveniles</a></li>
+                        <li><a href="#femenino">Fútbol Femenino</a></li>
+                        <li><a href="#escuela">Escuela de Fútbol</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                <h4>Síguenos</h4>
-                <div class="social-links">
-                    <a href="https://www.facebook.com" target="_blank" class="social-link">
-                    <img src="./public/facebook.png " alt="Facebook">Facebook
-                    </a>
-                    <a href="https://www.instagram.com" target="_blank" class="social-link">
-                    <img src="./public/ig.png" alt="Instagram" >Instagram
-                    </a>
-                </div>
+                    <h4>Síguenos</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link">Facebook</a>
+                        <a href="#" class="social-link">Instagram</a>
+                    </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy;2025 Nexus web. Todos los derechos reservados.</p>
+                <p>&copy;2025 Club de futbol Arenal. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
