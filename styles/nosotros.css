@@ -214,13 +214,15 @@ body {
 .historia-image {
   position: relative;
 }
-
 .image-container {
   position: relative;
   background: var(--white);
   border-radius: 16px;
   padding: 32px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: auto;
+  overflow: hidden;
 }
 
 .image-container::before {
@@ -233,16 +235,55 @@ body {
   filter: blur(20px);
 }
 
-.image-container img {
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 320px;
+}
+
+.carousel img {
   width: 100%;
   height: 320px;
   object-fit: cover;
   border-radius: 12px;
-  margin-bottom: 24px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
 }
+
+.carousel img.active {
+  opacity: 1;
+  position: relative;
+}
+
+/* Botones */
+.prev-btn, .next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  border: none;
+  color: white;
+  font-size: 24px;
+  padding: 12px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background 0.3s ease;
+  z-index: 10;
+}
+
+.prev-btn:hover, .next-btn:hover {
+  background: rgba(0,0,0,0.8);
+}
+
+.prev-btn { left: 10px; }
+.next-btn { right: 10px; }
 
 .image-caption {
   text-align: center;
+  margin-top: 20px;
 }
 
 .image-caption h3 {
@@ -255,7 +296,6 @@ body {
 .image-caption p {
   color: var(--gray-400);
 }
-
 /* Valores Section */
 .valores {
   padding: 80px 0;

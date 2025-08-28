@@ -14,7 +14,7 @@
             <div class="nav-container">
             <!-- Logo -->
             <div class="nav-logo">
-                <a href="../index.html">
+                <a href="../clubarenal/index.html">
                 <img src="./public/logo.png" alt="Logo Club" class="logo" width="50" />
                 </a>
                 <span class="logo-text">Club de Futbol Arenal</span>
@@ -38,7 +38,7 @@
         </nav>
     </header>
     <!-- Historia Section -->
-    <section class="historia">
+    <section class="historia" id="historia">
         <div class="container">
             <div class="historia-grid">
                 <div class="historia-content">
@@ -60,15 +60,30 @@
                     </div>
                    
                 </div>
-                <div class="historia-image">
+                <section class="historia-image" id="historia-gallery">
                     <div class="image-container">
-                        <img src="./public/Cancha-de-fútbol-11.jpg" alt="Sede histórica del club">
+                        
+                        <!-- Carrusel -->
+                        <div class="carousel">
+                        <img src="./public/imagen8.jpeg" alt="Partido Emocionante" class="active">
+                        <img src="./public/imagen1.webp" alt="Gol Histórico">
+                        <img src="./public/imagen4.jpg" alt="Entrenamiento Intenso">
+                        <img src="./public/imagen6.webp" alt="Hinchada Apasionada">
+                        <img src="./public/imagen7.jpg" alt="Trofeo Conquistado">
+                        <img src="./public/imagen9.jpeg" alt="Vestuario Motivado">
+                        </div>
+
+                        <!-- Botones -->
+                        <button class="prev-btn" onclick="changeImage(-1)">&#10094;</button>
+                        <button class="next-btn" onclick="changeImage(1)">&#10095;</button>
+
+                        <!-- Caption -->
                         <div class="image-caption">
-                            <h3>Nuestra sede histórica</h3>
-                            <p>Completamente renovada manteniendo su esencia original</p>
+                        <h3>Nuestra sede histórica</h3>
+                        <p>Completamente renovada manteniendo su esencia original</p>
                         </div>
                     </div>
-                </div>
+                </section>
             </div>
         </div>
     </section>
@@ -294,4 +309,5 @@
         </div>
     </footer>
 </body>
+<script src="./js/nosotros.js"></script>
 </html>
