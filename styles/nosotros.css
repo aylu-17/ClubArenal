@@ -700,7 +700,7 @@ section > *:last-child {
   margin-right: auto;
 }
 
-.footer-button {
+.footer a {
   background: var(--white);
   color: var(--primary);
   padding: 12px 32px;
@@ -710,9 +710,10 @@ section > *:last-child {
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease;
+  text-decoration: none;
 }
 
-.footer-button:hover {
+.footer a:hover {
   background: rgba(255, 255, 255, 0.9);
   transform: translateY(-2px);
 }

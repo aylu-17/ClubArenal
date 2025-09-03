@@ -13,6 +13,20 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeCategorySlider();
 });
 
+document.getElementById("contactForm").addEventListener("submit", function(e){
+  e.preventDefault();
+
+  let nombre = document.getElementById("nombre").value;
+  let email = document.getElementById("email").value;
+  let asunto = document.getElementById("asunto").value;
+  let mensaje = document.getElementById("mensaje").value;
+
+  let texto = `Hola, soy ${nombre} (%20${email}%20).%0AAsunto: ${asunto}%0AMensaje:%0A${mensaje}`;
+  let url = `https://wa.me/5492972528022?text=${encodeURIComponent(texto)}`;
+
+  window.open(url, "_blank");
+});
+
 function initializeHeroSlider() {
     if (!slides.length) return;
     showSlide(0);
