@@ -140,17 +140,19 @@ body {
 }
 
 .hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+  z-index: 1001; /* que quede arriba del menú */
 }
 
-.bar {
-    width: 25px;
-    height: 3px;
-    background-color: #2c3e50;
-    margin: 3px 0;
-    transition: 0.3s;
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #2c3e50;
+  border-radius: 2px;
+  transition: all 0.3s ease;
 }
 
 /* Hero Section con Slider Mejorado */
@@ -419,43 +421,43 @@ body {
 
 /* Categorías Section Mejorada */
 .categorias {
-    padding: 6px 0;
+    padding: 10px 0;
     background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
 }
 
 .categorias .section-title {
     text-align: center;
-    margin-bottom: 4rem;
+    margin-bottom: 5rem;
 }
 
 .categorias-slider {
     position: relative;
     overflow: hidden;
-    margin-bottom: 3rem;
+    margin-bottom: 7rem;
 }
 
 .categorias-track {
     display: flex;
     transition: transform 0.5s ease;
-    gap: 30px;
+    gap: 40px;
+    padding: 0 20px;
 }
 
 .categoria-card {
     background: white;
     border-radius: 30px;
     overflow: hidden;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
-    min-width: 350px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    flex: 0 0 calc((100% - 80px) / 3); /* 3 tarjetas con gap */
+    max-width: calc((100% - 80px) / 3);
 }
 
-
+/* Imagen ocupa todo el ancho de la tarjeta */
 .categoria-card img {
     width: 100%;
-    height: 300px;
+    height: 250px;
     object-fit: cover;
-
 }
-
 
 .categoria-info {
     padding: 2rem;
@@ -490,15 +492,16 @@ body {
 
 .categoria-btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 .slider-controls {
     text-align: center;
-    margin-top: 3rem;
+    margin-top: 4rem;
 }
 
-.prev-btn, .next-btn {
+.prev-btn,
+.next-btn {
     background: #87CEEB;
     color: white;
     border: none;
@@ -511,7 +514,8 @@ body {
     transition: all 0.3s ease;
 }
 
-.prev-btn:hover, .next-btn:hover {
+.prev-btn:hover,
+.next-btn:hover {
     background: #4682B4;
     transform: scale(1.1);
 }
@@ -549,7 +553,7 @@ body {
     object-fit: cover;
     border-radius: 15px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-    transition: transform 0.3s ease;
+    transition: transform 0.7s ease;
     flex-shrink: 0;
 }
 
@@ -562,12 +566,11 @@ body {
         transform: translateX(0);
     }
     100% {
-        transform: translateX(-50%);
+        transform: translateX(-80%);
     }
 }
 
 /* Contacto Section Mejorada */
-
 .contacto {
     padding: 6rem 0;
     background: linear-gradient(135deg, #e9ecef 0%, #dee2e6 100%);
@@ -812,11 +815,18 @@ body {
     background: #4682B4;
 }
 
-.footer-bottom {
+.footer-bottom{
     text-align: center;
     padding-top: 2rem;
     border-top: 1px solid #34495e;
-    color: #bdc3c7;
+    color: #ffffff;
+}
+.footer-bottom a{
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid #34495e;
+    color: #ffffff;
+    text-decoration: none;
 }
 .footer-section img {
     width: 15px;
@@ -854,12 +864,44 @@ body {
     background: linear-gradient(45deg, #dc3545, #e74c3c);
 }
 
+@media (max-width: 1024px) {
+    .categoria-card {
+        flex: 0 0 calc((100% - 40px) / 2);
+        max-width: calc((100% - 40px) / 2);
+    }
+}
 /* Responsive Design */
 @media (max-width: 768px) {
     .hamburger {
         display: flex;
     }
-    
+
+    .categoria-card {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .categorias-track {
+        gap: 20px;
+        padding: 0 10px;
+    }
+
+    .categoria-info {
+        padding: 1.5rem;
+    }
+
+    .categoria-info h3 {
+        font-size: 1.2rem;
+    }
+
+    .categoria-info p {
+        font-size: 0.9rem;
+    }
+
+    .categoria-btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+    }
     .nav-menu {
         position: fixed;
         left: -100%;
@@ -876,7 +918,14 @@ body {
     .nav-menu.active {
         left: 0;
     }
-    
+    .logo {
+        width: 40px;
+        height: 40px;
+    }
+
+    .logo-text {
+        font-size: 1rem;
+    }
     .hero-title {
         font-size: 2.5rem;
     }
